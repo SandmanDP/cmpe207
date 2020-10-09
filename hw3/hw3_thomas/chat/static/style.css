@@ -1,0 +1,20 @@
+body {
+    padding: 15px;
+}
+
+h1 {
+    color: #000000;
+    font-family: 'serif';
+}
+
+p  {
+    color: #007BE7;
+    font-family: 'Lobster';
+    font-size: 14pt;
+}
+
+.typingNotifier {
+    height: 12px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}

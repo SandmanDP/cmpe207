@@ -14,7 +14,6 @@ try:
     s.bind(("localhost", port))
     print(f'Server launched on port {port}! Password is `{password}`')
 
-
     while True:
         s.listen(1)
         # now our endpoint knows about the OTHER endpoint.
@@ -22,8 +21,8 @@ try:
         client, address = s.accept()
         print(f"Connection from {address} has been established!")
         time.sleep(0.5)
-        client.send(bytes("Password: \x1b[30;40m", "utf-8"))
         try:
+            client.send(bytes("Password: \x1b[30;40m", "utf-8"))
             login_msg = client.recv(2048)
             client.send(bytes("\x1b[0m","utf-8"))
             from_client = login_msg.decode("utf-8")
